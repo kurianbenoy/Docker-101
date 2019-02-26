@@ -1,6 +1,12 @@
-web:
-  build: ./web
-  ports:
-   - "5000:5000"
-  volumes:
-   - .:/code
+# Add Docker-compose version
+version: '3.7'
+
+services:
+# Expose the container app called Web which contains flask app
+  web:
+    build: ./web
+    ports:
+# runs on port 5000
+      - "5000:5000"
+    volumes:
+      - .:/code
